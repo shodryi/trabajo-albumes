@@ -1,0 +1,97 @@
+/*GLOBALES*/
+body{background-color: rgb(41, 39, 39) ;
+    color: white;
+    margin: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+h1{color: white;
+    text-align: center;}
+
+
+
+/*NAVEGADOR*/
+
+nav{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+    list-style: none;
+}
+
+.nav:hover{
+    color: rgb(73, 73, 218); /*algo asi ??*/
+}
+
+.nav,.sep{
+    color: white;
+    text-decoration: none;    
+}
+
+/*ARTISTAS*/
+
+.seccion_artistas{
+
+}
+
+.contenedor_artistas{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.contenedor_artistas div img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.contenedor_informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #081b44;
+    border: 3px solid black;
+    padding: 3px;
+}
+
+.contenedor_texto{
+    margin-left: 10px;
+}
+
+.contenedor_texto p{
+    font-size: 12px;
+}
+
+.artista{
+    border: 1px solid gray;
+    padding: 20px;
+    
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: black;
+    border-radius: 0px;
+    margin: 150px 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
