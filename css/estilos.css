@@ -2,7 +2,11 @@
 body{background-color: rgb(41, 39, 39) ;
     color: white;
     margin: 0px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a{
@@ -25,7 +29,7 @@ nav{
     padding: 10px; 
 }
 
-ul li{
+ul .navegador{
     display: inline-block;
     padding: 0px 20px;
     list-style: none;
@@ -42,6 +46,150 @@ ul li{
 
 /*ARTISTAS*/
 
+/* CARROUSEL */
+.contenedor{
+    width: 90%;
+    margin: 50px auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.contenedorCarousel{
+    border: 2px solid black;
+    box-shadow: 5px 10px  rgb(32, 48, 189);
+    border-radius: 20px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    height: 100% ;
+    display: flex;
+    width: 500%;
+    transition: all 0.3s;
+}
+
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+.uno, .dos, .tres{
+    border: 3px solid black;
+    margin: 10px;
+}
+
+.controles .flecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.flecha.der{
+    right: 10px;
+}
+
+.controles ul{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.controles ul li{
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(30, 58, 214);
+    border-radius: 20px;
+    margin: 10px;
+    background-color: rgb(51, 67, 207);
+}
+
+.controles ul li.seleccionado{
+    background-color: transparent;
+}
+
+/* cards */
+.card, .uno, .dos, .tres{
+    width: 320px;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.contenidoImagen, .contenidoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.contenidoImagen{
+    position: relative;
+    row-gap: 5px;
+    padding: 20px 0;
+}
+
+.overlay{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #081b44;
+    /* border: 3px solid red; */
+    border-radius: 25px;
+}
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+    padding: 3px;
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border : 4px solid rgb(24, 21, 21) ;
+}
+
+.descripcion{
+    text-align: center;
+}
+
+.boton{
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #153d94;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton:hover{
+    background: rgb(73, 73, 218) ;
+}
+
+
+
 .seccion_artistas{
 
 }
@@ -50,6 +198,7 @@ ul li{
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: 10px;
+    row-gap: 10px;
     margin: 0 10px 0 10px;
 }
 
@@ -77,21 +226,39 @@ ul li{
     font-size: 12px;
 }
 
-.artista{
-    border: 1px solid gray;
-    padding: 20px;
-    
-}
 
 /*FOOTER*/
 
 footer{
     background-color: black;
     border-radius: 0px;
-    margin: 150px 0px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    margin-top: auto;
 }
 
 
+/* PAGINA DE ARTISTAS */
+.principal{
+    /* border: 3px solid black; */
+    background: linear-gradient(rgb(41, 39, 39),#081b44, rgb(41, 39, 39));;
+    margin: 0px 0px 100px 0px;
+}
+
+.parrafo{
+    margin: 20px;
+    padding: 20px 20px;
+    font-size: 15px;
+    font-size: larger
+}
+
+.parrafo img{
+    border-radius: 20px;
+    float: left;
+    margin: 20px;
+}
+.titulo{
+    text-align: left;
+}
+  
