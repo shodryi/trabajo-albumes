@@ -94,4 +94,133 @@ footer{
     justify-content: space-between;
 }
 
+/*CONTACTO*/
+
+.contenedor-header__bottom{
+    margin-bottom: 90px;
+}
+
+.contenedor_main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.section_contacto{
+    background-color: #081b44;
+    color: white;
+    padding: 23px 50px 23px 50px;
+    height: 517px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.contenedor_contactos{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_contactos svg{
+    margin-right: 4px;
+}
+
+.section_contacto h2{
+    font-family: var(--vesper);
+    font-size: 38px;
+}
+
+.section_contacto h3{
+    font-family: var(--fuenteContactos);
+    font-size: 17px;
+}
+
+.logo3{
+    width: 150px;
+ 
+}
+
+/*CONTACTO FORMULARIO*/
+
+.box-shadow{
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.formulario{
+    background-color: #081b44;
+    padding: 50px;
+}
+
+.formulario h2{
+    font-family: var(--vesper);
+    margin-bottom: 60px;
+}
+
+.contenedor_campos{
+    display: flex;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.campo label{
+    font-family: var(--sans);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.campo textarea{
+    height: 12rem;
+    resize: none;
+}
+
+.campo_input,
+.campo textarea{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 354px;
+    font-size: 20px;
+}
+
+.campo textarea{
+    width: 728px;
+}
+
+.campo input:focus,
+.campo textarea{
+    outline: none;
+}
+
+.campo:first-of-type{
+    margin-right: 20px;
+}
+
+.telefono-size{
+    width: 306px;
+}
+
+.boton_enviar{
+    font-size: 100px;
+    width: 119px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-family: var(--sans);
+    background-color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.boton_enviar:hover{
+    cursor: pointer;
+}
 
