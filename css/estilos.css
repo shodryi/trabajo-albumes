@@ -13,8 +13,6 @@ a{
 h1{color: white;
     text-align: center;}
 
-
-
 /*NAVEGADOR*/
 
 nav{
@@ -83,36 +81,25 @@ ul li{
     
 }
 
-/*FOOTER*/
-
-footer{
-    background-color: black;
-    border-radius: 0px;
-    margin: 150px 0px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
 /*CONTACTO*/
 
 .contenedor-header__bottom{
     margin-bottom: 90px;
 }
 
-.contenedor_main{
+.contenedor_principal{
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
+    align-items: center;
 }
 
 .section_contacto{
     background-color: #081b44;
     color: white;
     padding: 23px 50px 23px 50px;
-    height: 517px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .contenedor_contactos{
@@ -125,18 +112,14 @@ footer{
 }
 
 .section_contacto h2{
-    font-family: var(--vesper);
+    margin-top: 15px;
+    font-family: "Vesper Libre", serif;
     font-size: 38px;
 }
 
 .section_contacto h3{
-    font-family: var(--fuenteContactos);
+    font-family: "Zen Maru Gothic", serif;
     font-size: 17px;
-}
-
-.logo3{
-    width: 150px;
- 
 }
 
 /*CONTACTO FORMULARIO*/
@@ -148,12 +131,13 @@ footer{
 }
 
 .formulario{
+    width: 54%;
     background-color: #081b44;
     padding: 50px;
 }
 
 .formulario h2{
-    font-family: var(--vesper);
+    font-family: "Vesper Libre", serif;
     margin-bottom: 60px;
 }
 
@@ -166,8 +150,13 @@ footer{
     flex-direction: column;
     margin-bottom: 80px;
 }
+
+.formulario > .campo:last-child{
+    margin-bottom: 10px;
+    align-items: end;
+}
 .campo label{
-    font-family: var(--sans);
+    font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 14px;
@@ -176,15 +165,16 @@ footer{
 
 .campo textarea{
     height: 12rem;
-    resize: none;
 }
 
 .campo_input,
 .campo textarea{
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     width: 354px;
     font-size: 20px;
+    background-color: #081b44;
+    color: white;
 }
 
 .campo textarea{
@@ -205,12 +195,10 @@ footer{
 }
 
 .boton_enviar{
-    font-size: 100px;
     width: 119px;
     height: 40px;
-    border: none;
     color: white;
-    font-family: var(--sans);
+    font-family: "Open Sans", sans-serif;
     background-color: black;
     text-transform: uppercase;
     text-align: center;
@@ -224,3 +212,13 @@ footer{
     cursor: pointer;
 }
 
+/*FOOTER*/
+
+footer{
+    background-color: black;
+    border-radius: 0px;
+    margin-top: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
