@@ -57,11 +57,15 @@ ul .navegador{
 
 .contenedorCarousel{
     border: 2px solid black;
-    box-shadow: 5px 10px  rgb(32, 48, 189);
+    background-color: #082F45;
+    /*box-shadow: 5px 10px  rgb(32, 48, 189);*/
     border-radius: 20px;
     height: 600px;
     position: relative;
     overflow: hidden;
+    -webkit-box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
+    -moz-box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
+    box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
 }
 
 .slider{
@@ -148,7 +152,7 @@ ul .navegador{
     width: 100%;
     background-color: #081b44;
     /* border: 3px solid red; */
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
 }
 
 .card-image{
