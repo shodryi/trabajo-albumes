@@ -17,9 +17,9 @@
         <nav>
             <a class="nav" href="index.html">Página principal</a>
             <ul>
-                <li><a class="nav" href="contacto.html">Contactenos</a></li>
-                <li class="sep">|</li>
-                <li><a class="nav" href="info_us.html">Nuestra info</a></li>
+                <li class="navegador"><a class="nav" href="contacto.html">Contactenos</a></li>
+                <li class="sep navegador">|</li>
+                <li class="navegador"><a class="nav" href="info_us.html">Nuestra info</a></li>
             </ul>
         </nav>
     </header>
@@ -28,38 +28,281 @@
 
     <section class="seccion_artistas">
 
-        <div class="contenedor_artistas">
-            <a href="#">
-                <div class="contenedor_informacion">
-                    <img src="img/fito.jpg" alt="Fito Paez">
-                    <div class="contenedor_texto">
-                        <h2>Fito Páez</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed necessitatibus voluptatem quasi libero modi, exercitationem dolores suscipit! Ipsum nostrum mollitia modi aliquam laudantium repellat ducimus sint ullam labore dolores!</p>
-                    </div>
+        <div class="contenedor">
+            <div class="contenedorCarousel">
+                <div class="slider"> 
+                    <!-- dentro de cada section van las cards con 3 artistas cada uno -->
+                    <section>
+                        <!-- PRIMER CARD TANIA -->
+                        <div class="card uno">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/cantilo.jpeg" alt="Fabiana Cantilo" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> Fabiana Cantilo </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="artistasC1.html">ver mas</a> </button>
+                            </div>
+                        </div>
+                        <!-- SEGUNDA CARD TANIA -->
+                        <div class="card dos">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/spinetta.jpg" alt="Luis Alberto Spinetta" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> Luis Alberto Spinetta </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="artistasC1.html">ver mas</a> </button>
+                            </div>
+                        </div>
+    
+                        <!-- TERCERA CARD TANIA -->
+                        <div class="card tres">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/cerati.jpg" alt="Gustavo Cerati" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> Gustavo Cerati </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="artistasC1.html">ver mas</a> </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section>   
+                        <!-- PRIMER CARD RODRI -->
+                        <div class="card uno">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/fito.jpg" alt="Fito Páez" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista">Fito Páez</h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+    
+                        <!-- SEGUNDA CARD RODRI -->
+                        <div class="card dos">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/indio.jpg" alt="Indio Solari" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista">Indio Solari</h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+    
+                        <!-- TERCERA CARD RODRI -->
+                        <div class="card tres">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/charly.jpg" alt="Charly García" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista">Charly García</h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div> 
+                    </section>
+                    
+                    <section>  
+                        <!-- PRIMER CARD AGUS -->
+                        <div class="card uno">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+    
+                        <!-- SEGUNDA CARD AGUS -->
+                        <div class="card dos">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+    
+                        <!-- TERCERA CARD AGUS -->
+                        <div class="card tres">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div> 
+                    </section>
+                    <section>   
+                        <!-- PRIMER CARD MAXI -->
+                        <div class="card uno">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+                        <!-- SEGUNDA CARD MAXI -->
+                        <div class="card dos">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+                        <!-- TERCERA CARD MAXI -->
+                        <div class="card tres">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div> 
+                    </section>
+                    <section>   
+                        <!-- PRIMER CARD SONIA -->
+                        <div class="card uno">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+                        <!-- SEGUNDA CARD SONIA -->
+                        <div class="card dos">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div>
+                        <!-- TERCERA CARD SONIA -->
+                        <div class="card tres">
+                            <div class="contenidoImagen">
+                                <span class="overlay"></span>
+                                
+                                <div class="card-image">
+                                    <img src="img/folres.jpg" alt="tu artista" class="card-img">
+                                </div>
+                            </div>
+                            <div class="contenidoCard">
+                                <h2 class="artista"> alguien </h2>
+                                <p class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci minus nulla in fugiat doloribus voluptatum dignissimos, ullam fuga dolorem!</p>
+                                
+                                <button class="boton"> <a href="">ver mas</a> </button>
+                            </div>
+                        </div> 
+                    </section>
                 </div>
-            </a>
-            <a href="#">
-                <div class="contenedor_informacion">
-                    <img src="img/indio.jpg" alt="Indio Solari">
-                    <div class="contenedor_texto">
-                        <h2>Indio Solari</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed necessitatibus voluptatem quasi libero modi, exercitationem dolores suscipit! Ipsum nostrum mollitia modi aliquam laudantium repellat ducimus sint ullam labore dolores!</p>
-                    </div>
+                <div class="controles">
+                    <span class="flecha izq"><img src="img/izq.webp" alt="izq" height="50px"></span>
+                    <span class="flecha der"><img src="img/der.webp" alt="der" height="50px"></span>
+                    <ul>
+                        <li class="seleccionado"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
-            </a>
+            </div>
+        </div>     
 
-            <a href="#">
-                <div class="contenedor_informacion">
-                    <img src="img/charly.jpg" alt="Charly Garcia">
-                    <div class="contenedor_texto">
-                        <h2>Charly García</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sed necessitatibus voluptatem quasi libero modi, exercitationem dolores suscipit! Ipsum nostrum mollitia modi aliquam laudantium repellat ducimus sint ullam labore dolores!</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <!-- artistas -->
-        
     </section>
     <footer>
         <a class="logo" href=""><img class="logos" src="img/i_logo.png" alt="logo de instargam" width="80px"></a>
@@ -70,6 +313,8 @@
 
     <!-- iframes con albumes de artistas dentro de las paginas de cada rtista -->
     <!-- centrado al medio??  -->
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
