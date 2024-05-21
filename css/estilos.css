@@ -237,6 +237,7 @@ ul .navegador{
 }
 
 .section_contacto{
+    order: 1;
     background-color: #081b44;
     color: white;
     padding: 23px 50px 23px 50px;
@@ -273,9 +274,14 @@ ul .navegador{
 }
 
 .formulario{
+    order: 3;
     width: 54%;
     background-color: #081b44;
     padding: 50px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font-family: 'Times New Roman', Times, serif; /* Restablece la fuente a la predeterminada */
 }
 
 .formulario h2{
@@ -352,6 +358,24 @@ ul .navegador{
 
 .boton_enviar:hover{
     cursor: pointer;
+}
+
+/*JAVASCRIPT FORMULARIO*/
+
+.mensaje_formulario{
+    order: 2;
+    color: white;
+    font-family: "Vesper Libre", serif;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: red;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.mensaje_formulario p{
+    margin: 10px 0 10px 0;
 }
 
 /*FOOTER*/
