@@ -107,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (mensaje.value.length < 10){
                 crearMensajeHTML("El mensaje debe tener más de 10 caracteres.");
+                formularioValidado = false;
             }
 
             if (formularioValidado) {
