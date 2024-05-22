@@ -50,25 +50,54 @@ document.addEventListener('DOMContentLoaded', function() {
         const contenedorPrincipal = document.querySelector('.contenedor_principal');
         const formulario = document.querySelector('.formulario');
 
-        const nombre = document.querySelector('#nombre');
-        const email = document.querySelector('#email');
-        const mensaje = document.querySelector('#mensaje');
-        const telefono = document.querySelector('#telefono');
+        const inputNombre = document.querySelector('#nombre');
+        const inputEmail = document.querySelector('#email');
+        const inputMensaje = document.querySelector('#mensaje');
+        const inputTelefono = document.querySelector('#telefono');
 
-        let mensajeVisible = false;
+        let mensajeErrorVisible = false;
+        let mensajeCorrectoVisible = false;
 
-        function crearMensajeHTML(texto) {
+        function crearMensajeConfirmadoHTML(){
             // Crear el contenedor del mensaje solo si aún no hay uno visible
-            if (!mensajeVisible) {
+            if (!mensajeCorrectoVisible) {
                 const divMensaje = document.createElement('div');
-                divMensaje.classList.add('mensaje_formulario');
+                divMensaje.classList.add('mensaje_formulario_correcto');
+                divMensaje.style.display = 'block';
                 contenedorPrincipal.appendChild(divMensaje);
-                mensajeVisible = true;
+                mensajeCorrectoVisible = true;
 
                 // Hacer que el mensaje desaparezca después de 5 segundos
                 setTimeout(() => {
                     divMensaje.remove();
-                    mensajeVisible = false;
+                    mensajeCorrectoVisible = false;
+                    divMensaje.style.display = 'none';
+                }, 5000);
+            }
+
+            // Crear un nuevo párrafo de mensaje
+            const parrafoMensaje = document.createElement('p');
+            parrafoMensaje.textContent = '¡Mensaje enviado correctamente!';
+            
+            // Agregar el párrafo al contenedor del mensaje
+            const divMensaje = document.querySelector('.mensaje_formulario_correcto');
+            divMensaje.appendChild(parrafoMensaje);
+        }
+
+        function crearMensajeErrorHTML(texto) {
+            // Crear el contenedor del mensaje solo si aún no hay uno visible
+            if (!mensajeErrorVisible) {
+                const divMensaje = document.createElement('div');
+                divMensaje.classList.add('mensaje_formulario_error');
+                divMensaje.style.display = 'block';
+                contenedorPrincipal.appendChild(divMensaje);
+                mensajeErrorVisible = true;
+
+                // Hacer que el mensaje desaparezca después de 5 segundos
+                setTimeout(() => {
+                    divMensaje.remove();
+                    mensajeErrorVisible = false;
+                    divMensaje.style.display = 'none';
                 }, 5000);
             }
 
@@ -77,42 +106,79 @@ document.addEventListener('DOMContentLoaded', function() {
             parrafoMensaje.textContent = texto;
             
             // Agregar el párrafo al contenedor del mensaje
-            const divMensaje = document.querySelector('.mensaje_formulario');
+            const divMensaje = document.querySelector('.mensaje_formulario_error');
             divMensaje.appendChild(parrafoMensaje);
+        }
+
+        function modificarLabelFormulario(label, agregar) {
+            // Verificar si ya existe un span con el asterisco
+            const span = label.querySelector('span');
+            if (agregar) {
+                if (!span) {
+                    // Crear un elemento span para el asterisco
+                    let spanHTML = document.createElement('span');
+                    spanHTML.textContent = '*';
+                    spanHTML.style.color = 'rgb(224, 24, 24)';
+                    spanHTML.style.fontWeight = '600';
+
+                    // Agregar el span al final del label
+                    label.appendChild(spanHTML);
+                }
+            } else {
+                // Eliminar el span si ya existe
+                if (span) {
+                    span.remove();
+                }
+            }
+        }
+
+        function verificarYModificarLabel(inputYlabel) {
+            const input = document.getElementById(inputYlabel);
+            const label = document.querySelector(`label[for="${inputYlabel}"]`);
+            if (input.value === '') {
+                modificarLabelFormulario(label, true);
+            } else {
+                modificarLabelFormulario(label, false);
+            }
         }
 
         formulario.addEventListener('submit', function(e) {
             e.preventDefault();
             let formularioValidado = true;
 
-            // Limpiar mensajes de validación previos
-            const mensajesExistentes = document.querySelector('.mensaje_formulario');
-            if (mensajesExistentes) {
-                mensajesExistentes.remove();
-                mensajeVisible = false;
+            // Limpiar mensajes de validación ERRONEOS previos
+            const mensajesErrorExistentes = document.querySelector('.mensaje_formulario_error');
+            if (mensajesErrorExistentes) {
+                mensajesErrorExistentes.remove();
+                mensajeErrorVisible = false;
             }
 
-            if (nombre.value === '') {
-                crearMensajeHTML("El nombre en el formulario es obligatorio.");
-                formularioValidado = false;
-            } else if (nombre.value.length < 3) {
-                crearMensajeHTML("El nombre debe tener más de 3 caracteres.");
-                formularioValidado = false;
-            }
-            
-            if (email.value === '') {
-                crearMensajeHTML("El email en el formulario es obligatorio.");
-                formularioValidado = false;
+            // Limpiar mensajes de validación ERRONEOS previos
+            const mensajesCorrectoExistentes = document.querySelector('.mensaje_formulario_correcto');
+            if (mensajesCorrectoExistentes) {
+                mensajesCorrectoExistentes.remove();
+                mensajeCorrectoVisible = false;
             }
 
-            if (mensaje.value.length < 10){
-                crearMensajeHTML("El mensaje debe tener más de 10 caracteres.");
+            // Verificar y modificar labels para agregar un asterisco según la validez de los inputs
+            verificarYModificarLabel('nombre');
+            verificarYModificarLabel('email');
+            verificarYModificarLabel('mensaje');
+            verificarYModificarLabel('telefono');
+
+            // Validación de los campos del formulario
+            if (inputNombre.value === '' || inputEmail.value === '' || inputMensaje.value === '' || inputTelefono.value === '') {
+                crearMensajeErrorHTML("Todos los campos son obligatorios.");
+                formularioValidado = false;
+            } else if (inputMensaje.value.length < 10) {
+                crearMensajeErrorHTML("El mensaje debe tener más de 10 caracteres.");
                 formularioValidado = false;
             }
 
             if (formularioValidado) {
                 // Procesar el formulario si todos los campos están validados
-                console.log('Formulario enviado exitosamente');
+                console.log('Formulario enviado correctamente');
+                crearMensajeConfirmadoHTML();
             }
         });
 
