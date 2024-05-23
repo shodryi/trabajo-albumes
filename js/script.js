@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // a los controles con la clase seleccionado les quita la clase
             document.querySelector('.controles .seleccionado').classList.remove('seleccionado');
             //permite movimiento
-            slider.style.transform = 'translate('+ (section) * -20 +'%)';
+            slider.style.transform = 'translate('+ (section) * -25 +'%)';
         }
 
         document.querySelectorAll('.controles li').forEach(seleccionar);
@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
         //evento que agrega funcion al hacer click en los puntitos tmb
         flechaIzq.addEventListener('click', function(){
             //operador ternario para ver en q posicion se encuentra los section y moverlo depeniendo de esta
-            section = (section > 0) ? section - 1 : 4;
+            section = (section > 0) ? section - 1 : 3;
             seleccionarIncide(section);
             indicadorPadre.children[section].classList.add('seleccionado');
         })
 
         flechaDer.addEventListener('click', function(){
-            section = (section < 4) ? section + 1 : 0;
+            section = (section < 3) ? section + 1 : 0;
             seleccionarIncide(section);
             indicadorPadre.children[section].classList.add('seleccionado');
         })

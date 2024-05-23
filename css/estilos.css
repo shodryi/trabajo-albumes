@@ -48,15 +48,11 @@ ul .navegador{
 .contenedor{
     width: 90%;
     margin: 50px auto;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .contenedorCarousel{
     border: 2px solid black;
     background-color: #082F45;
-    /*box-shadow: 5px 10px  rgb(32, 48, 189);*/
     border-radius: 20px;
     height: 600px;
     position: relative;
@@ -69,7 +65,7 @@ ul .navegador{
 .slider{
     height: 100% ;
     display: flex;
-    width: 500%;
+    width: 400%;
     transition: all 0.3s;
 }
 
@@ -125,6 +121,7 @@ ul .navegador{
 /* cards */
 .card, .uno, .dos, .tres{
     width: 320px;
+    height: 500px;
     border-radius: 25px;
     background-color: black;
 }
@@ -149,7 +146,6 @@ ul .navegador{
     height: 100%;
     width: 100%;
     background-color: #081b44;
-    /* border: 3px solid red; */
     border-radius: 25px 25px 0 0;
 }
 
@@ -158,7 +154,6 @@ ul .navegador{
     height: 150px;
     width: 150px;
     border-radius: 50%;
-
     padding: 3px;
 }
 
@@ -181,7 +176,6 @@ ul .navegador{
     padding: 8px 16px;
     background-color: #153d94;
     border-radius: 6px;
-    margin: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
