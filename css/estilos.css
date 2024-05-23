@@ -1,0 +1,433 @@
+/*GLOBALES*/
+body{background-color: rgb(41, 39, 39) ;
+    color: white;
+    margin: 0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+h1{color: white;
+    text-align: center;}
+
+/*NAVEGADOR*/
+
+nav{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; 
+}
+
+ul .navegador{
+    display: inline-block;
+    padding: 0px 20px;
+    list-style: none;
+}
+
+.nav:hover{
+    color: rgb(73, 73, 218); /*algo asi ??*/
+}
+
+.nav,.sep{
+    color: white;
+    text-decoration: none;    
+}
+
+/*ARTISTAS*/
+
+/* CARROUSEL */
+.contenedor{
+    width: 90%;
+    margin: 50px auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.contenedorCarousel{
+    border: 2px solid black;
+    background-color: #082F45;
+    /*box-shadow: 5px 10px  rgb(32, 48, 189);*/
+    border-radius: 20px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
+    -moz-box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
+    box-shadow: 7px 7px 31px -6px rgba(0,0,0,1);
+}
+
+.slider{
+    height: 100% ;
+    display: flex;
+    width: 500%;
+    transition: all 0.3s;
+}
+
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1%;
+}
+
+.uno, .dos, .tres{
+    border: 3px solid black;
+    margin: 10px;
+}
+
+.controles .flecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.flecha.der{
+    right: 10px;
+}
+
+.controles ul{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.controles ul li{
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgb(30, 58, 214);
+    border-radius: 20px;
+    margin: 10px;
+    background-color: rgb(51, 67, 207);
+}
+
+.controles ul li.seleccionado{
+    background-color: transparent;
+}
+
+/* cards */
+.card, .uno, .dos, .tres{
+    width: 320px;
+    border-radius: 25px;
+    background-color: black;
+}
+
+.contenidoImagen, .contenidoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.contenidoImagen{
+    position: relative;
+    row-gap: 5px;
+    padding: 20px 0;
+}
+
+.overlay{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #081b44;
+    /* border: 3px solid red; */
+    border-radius: 25px 25px 0 0;
+}
+
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+    padding: 3px;
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border : 4px solid rgb(24, 21, 21) ;
+}
+
+.descripcion{
+    text-align: center;
+}
+
+.boton{
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #153d94;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.boton:hover{
+    background: rgb(73, 73, 218) ;
+}
+
+.contenedor_artistas{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 0 10px 0 10px;
+}
+
+.contenedor_artistas div img{
+    width: 150px;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.contenedor_informacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #081b44;
+    border: 3px solid black;
+    padding: 3px;
+}
+
+.contenedor_texto{
+    margin-left: 10px;
+}
+
+.contenedor_texto p{
+    font-size: 12px;
+}
+
+
+/*CONTACTO*/
+
+.contenedor-header__bottom{
+    margin-bottom: 90px;
+}
+
+.contenedor_principal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.section_contacto{
+    order: 1;
+    background-color: #081b44;
+    color: white;
+    padding: 23px 50px 23px 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contenedor_contactos{
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_contactos svg{
+    margin-right: 4px;
+}
+
+.section_contacto h2{
+    margin-top: 15px;
+    font-family: "Vesper Libre", serif;
+    font-size: 38px;
+}
+
+.section_contacto h3{
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 17px;
+}
+
+/*CONTACTO FORMULARIO*/
+
+.box-shadow{
+    -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+}
+
+.formulario{
+    order: 3;
+    width: 54%;
+    background-color: #081b44;
+    padding: 50px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font-family: 'Times New Roman', Times, serif; /* Restablece la fuente a la predeterminada */
+}
+
+.formulario h2{
+    font-family: "Vesper Libre", serif;
+    margin-bottom: 60px;
+}
+
+.contenedor_campos{
+    display: flex;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.formulario > .campo:last-child{
+    margin-bottom: 10px;
+    align-items: end;
+}
+.campo label{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.campo textarea{
+    height: 12rem;
+}
+
+.campo_input,
+.campo textarea{
+    border: none;
+    border-bottom: 1px solid white;
+    width: 354px;
+    font-size: 20px;
+    background-color: #081b44;
+    color: white;
+}
+
+.campo textarea{
+    width: 728px;
+}
+
+.campo input:focus,
+.campo textarea{
+    outline: none;
+}
+
+.campo:first-of-type{
+    margin-right: 20px;
+}
+
+.telefono-size{
+    width: 306px;
+}
+
+.boton_enviar{
+    width: 119px;
+    height: 40px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    background-color: black;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.boton_enviar:hover{
+    cursor: pointer;
+}
+
+/*JAVASCRIPT FORMULARIO*/
+
+.mensaje_formulario_error{
+    order: 2;
+    display: none;
+    color: white;
+    font-family: "Vesper Libre", serif;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: rgb(199, 12, 12);
+    text-align: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.mensaje_formulario_error p{
+    margin: 10px 0 10px 0;
+}
+
+.mensaje_formulario_correcto{
+    order: 2;
+    display: none;
+    color: white;
+    font-family: "Vesper Libre", serif;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: rgb(3, 165, 3);
+    text-align: center;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.mensaje_formulario_correcto p{
+    margin: 10px 0 10px 0;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: black;
+    border-radius: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+
+/* PAGINA DE ARTISTAS */
+.principal{
+    /* border: 3px solid black; */
+    background: linear-gradient(rgb(41, 39, 39),#081b44, rgb(41, 39, 39));;
+    margin: 0px 0px 100px 0px;
+}
+
+.parrafo{
+    margin: 20px;
+    padding: 20px 20px;
+    font-size: 15px;
+    font-size: larger
+}
+
+.parrafo img{
+    border-radius: 20px;
+    float: left;
+    margin: 20px;
+}
+.titulo{
+    text-align: left;
+}
+  
