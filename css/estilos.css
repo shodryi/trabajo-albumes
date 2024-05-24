@@ -425,3 +425,141 @@ footer{
     text-align: left;
 }
   
+/* Media queries
+
+/* Tablets (pantallas de 768px a 1224px) */
+@media (max-width: 1224px) {
+    .contenedor {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .contenedorCarousel {
+        height: 750px;
+    }
+
+    .card, .uno, .dos, .tres {
+        width: 250px;
+        height: 500px;
+    }
+
+    .contenedor_artistas {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    .descripcion {
+        font-size: small;
+    }
+
+    .formulario {
+        width: 70%;
+        padding: 30px;
+    }
+
+    .campo_input, .campo textarea {
+        width: 100%;
+    }
+
+    .campo textarea {
+        width: 100%;
+    }
+    .parrafo img {
+        width: 100%;
+    }
+}
+
+/* Móviles (pantallas de 480px a 768px) */
+@media (max-width: 768px) {
+   
+
+    .contenedor {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .contenedorCarousel {
+        height: 100%;
+    }
+
+    .card, .uno, .dos, .tres {
+        width: 50%;
+        height: 400px;
+    }
+
+    .contenedor_artistas {
+        grid-template-columns: 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    .descripcion {
+        display: none;
+    }
+
+    .formulario {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .campo_input, .campo textarea {
+        width: 100%;
+    }
+
+    .campo textarea {
+        width: 100%;
+    }
+}
+
+/* Móviles pequeños (pantallas menores a 480px) */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contenedor {
+        height: 100%;
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .contenedorCarousel {
+        height: 100%;
+        width: 100%;
+    }
+
+    .card, .uno, .dos, .tres {
+        width: 120px;
+        height: 350px;
+        font-size: small;
+    }
+
+    .contenedor_artistas {
+        grid-template-columns: 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+    .contenidoImagen {
+        align-items: start;
+        padding: 0 0;
+    }
+    
+    .card-image .card-img {
+    height: 70%;
+        width: 70%;
+    }
+
+    .formulario {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .campo_input, .campo textarea {
+        width: 100%;
+    }
+
+    .campo textarea {
+        width: 100%;
+    }
+   
+}
