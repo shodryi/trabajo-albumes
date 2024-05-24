@@ -163,6 +163,14 @@ ul .navegador{
     object-fit: cover;
     border-radius: 50%;
     border : 4px solid rgb(24, 21, 21) ;
+    overflow: hidden;
+    margin: 20px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.card-img:hover {
+    transform: scale(1.2);
 }
 
 .descripcion{
@@ -562,4 +570,19 @@ footer{
         width: 100%;
     }
    
+}
+/*sobre nosotros*/
+#mapa iframe { 
+    padding:50px ;
+}
+.contenedor_fondo {
+    background-image:url(../img/fondo.jpeg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center; 
+}
+.galeria {
+    padding: 20px ;
+    place-content: auto;
 }
