@@ -179,6 +179,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Procesar el formulario si todos los campos están validados
                 console.log('Formulario enviado correctamente');
                 crearMensajeConfirmadoHTML();
+
+                // Vaciar los datos del formulario
+                formulario.reset();
             }
         });
 
